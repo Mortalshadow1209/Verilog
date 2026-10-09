@@ -12,7 +12,7 @@ module testbench;
         $dumpvars(0, testbench);
         $monitor("time=%0t clk=%b reset=%b d=%b q=%b", $time, clk, reset, d, q);
 
-        reset = 1; d = 0; #12;
+        reset = 1; d = 0; #18;
         reset = 0; d = 1; #10;
         d = 0; #10;
         d = 1; #2;
