@@ -15,8 +15,8 @@ module testbench;
         reset = 1; d = 0; #12;
         reset = 0; d = 1; #10;
         d = 0; #10;
-        d = 1; #3;
-        d = 0; #7;
+        d = 1; #2;
+        d = 0; #8;
         d = 1; #10;
 
         $finish;
