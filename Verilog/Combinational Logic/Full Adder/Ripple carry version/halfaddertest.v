@@ -1,9 +1,12 @@
+`include "halfaddermod.v"
+
 module testbench;
     reg a, b, cin;
     wire sum, cout;
 
     FA uut(.a(a), .b(b), .cin(cin), .sum(sum), .cout(cout));
 
+`ifndef SYNTHESIS
     initial begin
         $dumpfile("wave.vcd");
         $dumpvars(0, testbench);
@@ -20,4 +23,5 @@ module testbench;
 
         $finish;
     end
+`endif
 endmodule

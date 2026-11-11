@@ -1,9 +1,12 @@
+`include "mod.v"
+
 module testbench;
     reg clk, reset, en;
     wire [3:0] count;
 
     counter4 uut(.clk(clk), .reset(reset), .en(en), .count(count));
 
+`ifndef SYNTHESIS
     initial clk = 0;
     always #5 clk = ~clk;
 
@@ -19,4 +22,5 @@ module testbench;
 
         $finish;
     end
+`endif
 endmodule

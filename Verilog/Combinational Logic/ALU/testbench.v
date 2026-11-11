@@ -1,3 +1,5 @@
+`include "module.v"
+
 module testbench;
     reg [3:0] a, b;
     reg [1:0] sel;
@@ -5,6 +7,7 @@ module testbench;
 
     alu_4 uut(.a(a), .b(b), .sel(sel), .result(result));
 
+`ifndef SYNTHESIS
     initial begin
         $dumpfile("wave.vcd");
         $dumpvars(0, testbench);
@@ -24,4 +27,5 @@ module testbench;
 
         $finish;
     end
+`endif
 endmodule

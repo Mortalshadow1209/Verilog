@@ -1,9 +1,12 @@
+`include "mod.v"
+
 module testbench;
     reg clk, reset, din;
     wire [3:0] q;
 
     shift4 uut(.clk(clk), .reset(reset), .din(din), .q(q));
 
+`ifndef SYNTHESIS
     initial clk = 0;
     always #5 clk = ~clk;
 
@@ -22,4 +25,5 @@ module testbench;
 
         $finish;
     end
+`endif
 endmodule

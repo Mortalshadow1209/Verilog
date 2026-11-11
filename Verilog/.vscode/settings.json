@@ -1,0 +1,5 @@
+{
+    "teroshdl.tools.yosys.path": "E:\\GCSH\\App\\external\\yosys\\v59\\yosys.exe",
+    "teroshdl.tools.iverilog.path": "C:\\iverilog\\bin\\iverilog.exe",
+    "teroshdl.tools.gtkwave.path": "C:\\iverilog\\gtkwave\\bin\\gtkwave.exe"
+}

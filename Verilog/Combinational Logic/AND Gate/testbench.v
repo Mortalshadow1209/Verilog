@@ -1,9 +1,12 @@
+`include "module.v"
+
 module testbench;
     reg a, b;
     wire y;
 
     and_gate uut(.a(a), .b(b), .y(y));
 
+`ifndef SYNTHESIS
     initial begin
         $dumpfile("wave.vcd");
         $dumpvars(0, testbench);
@@ -19,4 +22,5 @@ module testbench;
     initial begin
         $monitor("time=%0t a=%b b=%b y=%b", $time, a, b, y);
     end
+`endif
 endmodule

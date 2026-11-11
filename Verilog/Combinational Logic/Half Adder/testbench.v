@@ -1,9 +1,12 @@
+`include "module.v"
+
 module testbench;
     reg a, b;
     wire s, c;
 
     HA uut(.a(a), .b(b), .sum(s), .carry(c));
 
+`ifndef SYNTHESIS
     initial begin
         $dumpfile("wave.vcd");
         $dumpvars(0, testbench);
@@ -16,4 +19,5 @@ module testbench;
 
         $finish;
     end
+`endif
 endmodule

@@ -1,9 +1,12 @@
+`include "module.v"
+
 module testbench;
     reg a, b, sel;
     wire y;
 
     mux_2to1 uut(.a(a), .b(b), .sel(sel), .y(y));
 
+`ifndef SYNTHESIS
     initial begin
         $dumpfile("wave.vcd");
         $dumpvars(0, testbench);
@@ -16,4 +19,5 @@ module testbench;
 
         $finish;
     end
+`endif
 endmodule
