@@ -1,4 +1,4 @@
-`include "module.v"
+`include "ha.v"
 
 module testbench;
     reg a, b;

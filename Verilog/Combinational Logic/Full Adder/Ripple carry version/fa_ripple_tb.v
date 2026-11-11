@@ -1,4 +1,4 @@
-`include "halfaddermod.v"
+`include "fa_ripple.v"
 
 module testbench;
     reg a, b, cin;

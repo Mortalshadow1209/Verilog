@@ -1,4 +1,4 @@
-`include "mod.v"
+`include "reg4.v"
 
 module testbench;
     reg clk, reset, en;

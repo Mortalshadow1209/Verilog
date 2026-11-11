@@ -1,4 +1,4 @@
-`include "module.v"
+`include "and_gate.v"
 
 module testbench;
     reg a, b;

@@ -1,4 +1,4 @@
-`include "module.v"
+`include "alu_4.v"
 
 module testbench;
     reg [3:0] a, b;

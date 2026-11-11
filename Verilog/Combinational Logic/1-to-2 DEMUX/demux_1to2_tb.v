@@ -1,4 +1,4 @@
-`include "module.v"
+`include "demux_1to2.v"
 
 module testbench;
     reg a, sel;

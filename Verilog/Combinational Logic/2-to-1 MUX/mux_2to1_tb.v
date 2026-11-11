@@ -1,4 +1,4 @@
-`include "module.v"
+`include "mux_2to1.v"
 
 module testbench;
     reg a, b, sel;

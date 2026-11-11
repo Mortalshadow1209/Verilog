@@ -1,4 +1,4 @@
-`include "mod.v"
+`include "shift4.v"
 
 module testbench;
     reg clk, reset, din;
